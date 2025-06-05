@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>You've Been SpongeBobbed!</title>
+  <style>
+    body {
+      background: #f9f871;
+      color: #000;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      text-align: center;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    img {
+      max-width: 90%;
+      border-radius: 12px;
+      margin: 20px 0;
+    }
+    h1 {
+      font-size: 2em;
+      animation: shake 0.5s infinite;
+    }
+    @keyframes shake {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(1deg); }
+      50% { transform: rotate(-1deg); }
+      75% { transform: rotate(1deg); }
+      100% { transform: rotate(0deg); }
+    }
+  </style>
+</head>
+<body>
+  <h1>😂 You've Been SpongeBobbed! 😂</h1>
+  <img src="https://media.giphy.com/media/JltOMwYmi0VrO/giphy.gif" alt="SpongeBob Laughing" />
+  <audio id="spongebob-audio" autoplay loop>
+    <source src="https://www.myinstants.com/media/sounds/spongebob-laugh.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    // Force audio to play on mobile
+    document.addEventListener('click', function () {
+      const audio = document.getElementById('spongebob-audio');
+      audio.play();
+    });
+  </script>
+</body>
+</html>
